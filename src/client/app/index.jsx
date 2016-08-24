@@ -13,7 +13,7 @@ class App extends React.Component {
   render () {
     return <div>
                 <Profile name={this.props.profileData.name} imgURL={this.props.profileData.imgURL}/>
-                //<Hobbies hobbyList={this.props.profileData.hobbyList}  />
+                <Hobbies hobbyList={this.props.profileData.hobbyList}  />
             </div>;
   }
 }

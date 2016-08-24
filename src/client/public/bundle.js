@@ -95,7 +95,6 @@
 	                'div',
 	                null,
 	                _react2.default.createElement(_Profile2.default, { name: this.props.profileData.name, imgURL: this.props.profileData.imgURL }),
-	                '//',
 	                _react2.default.createElement(_Hobbies2.default, { hobbyList: this.props.profileData.hobbyList })
 	            );
 	        }
@@ -21977,7 +21976,7 @@
   \************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -22007,17 +22006,17 @@
 	  }
 	
 	  _createClass(Profile, [{
-	    key: "render",
+	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
-	        "div",
+	        'div',
 	        null,
 	        _react2.default.createElement(
-	          "h3",
+	          'h3',
 	          null,
 	          this.props.name
 	        ),
-	        _react2.default.createElement("img", { src: "{this.props.imgURL}" })
+	        _react2.default.createElement('img', { src: this.props.imgURL })
 	      );
 	    }
 	  }]);
@@ -22066,6 +22065,13 @@
 	  _createClass(Hobbies, [{
 	    key: 'render',
 	    value: function render() {
+	      var hobbies = this.props.hobbyList.map(function (hobby, index) {
+	        return _react2.default.createElement(
+	          'li',
+	          { key: index },
+	          hobby
+	        );
+	      });
 	      return _react2.default.createElement(
 	        'div',
 	        null,
@@ -22073,6 +22079,11 @@
 	          'h5',
 	          null,
 	          'My hobbies:'
+	        ),
+	        _react2.default.createElement(
+	          'ul',
+	          null,
+	          hobbies
 	        )
 	      );
 	    }
